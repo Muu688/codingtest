@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="displayTable">
+        <div class="displayTableCell">
+    
+            <div class="authBlock">
+                <h1>Sign Up</h1>
+                <p>Sign up to log and view your workouts. Use a google account to sign up and gain access to all the benefits and features free of charge!</p><br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput id="username" required name="username" #userEmail maxlength="256">
+                </mat-form-field>
+                 <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput id="password" required name="password" type="password" #userPwd maxlength="256">
+                </mat-form-field>
+                <br>
+                
+                <!-- Calling SignUp Api from AuthService -->
+                <div class="formGroup">
+                    <button mat-flat-button color="primary" type=button
+                        (click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
+                </div>
+                <div class="formGroup">
+                    <span class="or"><span class="orInner">Or</span></span>
+                </div>
+    
+                <!-- Calling GoogleAuth Api from AuthService -->
+                <div class="formGroup">
+                    <button mat-flat-button color="primary" type=button (click)="authService.GoogleAuth()">Sign Up with
+                        Google</button>
+                </div>
+    
+                <div class="redirectToLogin">
+                    <span>Already have an account? <span class="redirect" routerLink="/sign-in"><u>Log In</u></span></span>
+                </div>
+            </div>
+        </div>
+</div>
