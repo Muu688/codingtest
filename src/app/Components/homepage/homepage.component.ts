@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatTableModule} from '@angular/material/table';
 import { AuthService } from "../../shared/services/auth-service.service";
 import { element } from 'protractor';
 import { SubjectAPIService } from 'src/app/shared/services/subjectAPI.service';
@@ -28,7 +29,6 @@ export class HomepageComponent {
       (
         data => {
           this.dataSource = new MatTableDataSource(data);
-          console.log(this.dataSource);
           this.setSort();
         }
       );

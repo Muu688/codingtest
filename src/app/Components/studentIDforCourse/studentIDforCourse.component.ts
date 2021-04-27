@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatTableModule} from '@angular/material/table';
 import { AuthService } from "../../shared/services/auth-service.service";
 import { element } from 'protractor';
-import { SubjectAPIService } from 'src/app/shared/services/subjectAPI.service';
+import { StudentAPIService } from 'src/app/shared/services/studentAPI.service';
 import { Subject } from '../../classes/subject'
 
 @Component({
@@ -13,17 +14,17 @@ import { Subject } from '../../classes/subject'
   styleUrls: ['./studentIDforCourse.component.css']
 })
 
-export class HomepageComponent {
+export class studentIDforCourseComponent {
 
-  constructor(private _subjectApiService: SubjectAPIService,  public authService: AuthService,) {
+  constructor(private _studentApiService: StudentAPIService,  public authService: AuthService,) {
   }
 
-  listSubjects: Subject[] = null;
+  listStudentIDs: Subject[] = null;
 
-  displayedColumns: string[] = ['subject_code', 'subject_desc'];
+  displayedColumns: string[] = ['student_id'];
 
   ngOnInit() {
-    this._subjectApiService.getSubjects()
+    this._studentApiService.getStudents()
       .subscribe
       (
         data => {
@@ -34,7 +35,7 @@ export class HomepageComponent {
       );
 
   }
-  dataSource = new MatTableDataSource(this.listSubjects);
+  dataSource = new MatTableDataSource(this.listStudentIDs);
 
   @ViewChild(MatSort)
   sort: MatSort = new MatSort;
