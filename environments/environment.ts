@@ -7,16 +7,16 @@
 // };
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyBlty0bZXs9mCGn-Q7jinoNnagdqCZSAjs",
-    authDomain: "workout-4a223.firebaseapp.com",
+    apiKey: "AIzaSyA3VH1aMmv5rwZdonbCkmh34VWELR0JS1c",
+    authDomain: "codetest-jvb.firebaseapp.com",
     //databaseURL: "YOUR_DATABASE_URL",
-    projectId: "workout-4a223",
-    storageBucket: "workout-4a223.appspot.com",
-    messagingSenderId: "494092364986",
-    appId: "1:494092364986:web:45a93dafa7589e0d0e6683"
+    projectId: "codetest-jvb",
+    storageBucket: "codetest-jvb.appspot.com",
+    messagingSenderId: "491058804153",
+    appId: "1:491058804153:web:9d9ce1167c01dbee143268"
   },
   production: false,
-  apiurl: 'https://localhost:44366/api/'
+  apiurl: "http://localhost:3000/api/"
 };
 
 /*

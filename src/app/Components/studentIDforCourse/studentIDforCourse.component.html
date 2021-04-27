@@ -1,22 +1,18 @@
 <h2>All Subjects</h2>
 <div class="container">
-  
+
+  <h1>{{subject_code}}</h1>
+
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Subject_Code Column -->
-    <ng-container matColumnDef="subject_code">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Subject Code </th>
-      <td mat-cell *matCellDef="let element"> {{element.subject.subject_code}} </td>
+    
+    <!-- Student_id Column -->
+    <ng-container matColumnDef="student_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Student Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.student.student_id}} </td>
     </ng-container>
-  
-    <!-- Subject Desc Column -->
-    <ng-container matColumnDef="subject_desc">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Subject Desc </th>
-      <td mat-cell *matCellDef="let element"> {{element.subject.subject_desc}} </td>
-    </ng-container>
-  
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>

@@ -4,11 +4,10 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { environment } from 'environments/environment';
 import { Subject } from '../../classes/subject'
 
-
 @Injectable()
 export class SubjectAPIService {
 
-  private APIURL: string = environment.apiurl + '/subjects';
+  private APIURL: string = environment.apiurl + 'subjects';
   constructor(private http: HttpClient) {
   }
 
