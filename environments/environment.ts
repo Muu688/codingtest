@@ -16,7 +16,7 @@ export const environment = {
     appId: "1:491058804153:web:9d9ce1167c01dbee143268"
   },
   production: false,
-  apiurl: "http://localhost:3000/api/"
+  apiurl: "http://localhost:3000/"
 };
 
 /*

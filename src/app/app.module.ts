@@ -11,14 +11,15 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { StudentidsforcourseComponent } from './studentidsforcourse/studentidsforcourse.component';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { SubjectAPIService } from './shared/services/subjectAPI.service';
+import { StudentAPIService } from './shared/services/studentAPI.service';
 import { AuthService } from './shared/services/auth-service.service';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -67,7 +68,7 @@ const routes: Routes = [
     StudentidsforcourseComponent,
     HomepageComponent
   ],
-  providers: [SubjectAPIService, AuthService,
+  providers: [SubjectAPIService, StudentAPIService, AuthService,
     { provide: LOCALE_ID, useValue: 'en-AU' }],
   bootstrap: [AppComponent]
 })

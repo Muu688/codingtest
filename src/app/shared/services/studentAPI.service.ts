@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
-import { environment } from 'environments/environment';
+import { environment } from '../../../../environments/environment';
 import { Student } from '../../classes/student'
-
 
 @Injectable()
 export class StudentAPIService {
